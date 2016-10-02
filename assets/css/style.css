@@ -1,0 +1,34 @@
+body, div {
+    margin-top: 15px;
+}
+.item, .ui.list {
+    margin-top: 0;
+}
+.item {
+    cursor: pointer; height: 47px;
+}
+.ui.list {
+    border-left: 1px solid #E8E8E8;
+    border-right: 1px solid #E8E8E8;
+}
+.gva-right-text {
+    text-align: right;
+}
+.gva-relative {
+    position: relative;
+}
+.gva-prompt {
+    position: absolute;
+    color: rgba(0,0,0,0.4);
+    padding-left: 15px;
+    margin-top: 8px;
+    z-index: 5;
+}
+.gva-transparent {
+    background: transparent!important;
+    z-index: 10;
+}
+.gva-active-bkg {
+    background: rgba(0,0,0,.03)!important;
+    color: rgba(0,0,0,.8)!important;
+}
