@@ -3,7 +3,7 @@ import {
 } from '../constants/constants.js';
 
 const initialState = {
-  image: null,
+  image: {},
 };
 
 export default function image(state = initialState, action) {

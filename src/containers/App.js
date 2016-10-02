@@ -3,17 +3,19 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import Image from '../components/Image';
+import Rating from '../components/Rating';
 import * as inputActions from '../actions/inputActions';
 
 class App extends Component {
 
   render() {
-    const { image } = this.props;
-    const { getImage } = this.props;
+    const { image, rating } = this.props;
+    const { getRating } = this.props;
 
     return (<div className="ui container">
-      <h2 className="ui header">Title of Test 2</h2>
+      <h2 className="ui header">Title of Test 3</h2>
       <Image image={image} />
+      <Rating rating={rating} getRating={getRating} />
     </div>);
   }
 }
@@ -21,18 +23,20 @@ class App extends Component {
 function mapStateToProps(state) {
   return {
     image: state.image.image,
+    rating: state.rating.rating,
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    getImage: bindActionCreators(inputActions.getImage, dispatch),
+    getRating: bindActionCreators(inputActions.getRating, dispatch),
   };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
 
 App.propTypes = {
-  image: PropTypes.object.isRequired,
-  getImage: PropTypes.func.isRequired,
+  image: PropTypes.object,
+  rating: PropTypes.number,
+  getRating: PropTypes.func.isRequired,
 };

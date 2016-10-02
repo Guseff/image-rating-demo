@@ -7,12 +7,12 @@ export default class Image extends Component {
 
     return (<div className="ui">
       <div className="">
-        <img src={image.url} />
+        <img alt="" src={image.url} />
       </div>
     </div>);
   }
 }
 
 Image.propTypes = {
-  image: PropTypes.object.isRequired,
+  image: PropTypes.object,
 };

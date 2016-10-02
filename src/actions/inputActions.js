@@ -1,5 +1,6 @@
 import {
   GET_IMG,
+  GET_RATING,
 } from '../constants/constants.js';
 
 
@@ -15,5 +16,14 @@ export function getImage() {
           payload: resp,
         });
       });
+}
+
+export function getRating(num) {
+  console.log(num);
+  return (dispatch) =>
+    dispatch({
+      type: GET_RATING,
+      payload: num,
+    });
 }
 

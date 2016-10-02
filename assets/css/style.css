@@ -1,6 +1,11 @@
 body, div {
     margin-top: 15px;
 }
+
+img {
+  width: 600px;
+}
+
 .item, .ui.list {
     margin-top: 0;
 }
@@ -32,3 +37,31 @@ body, div {
     background: rgba(0,0,0,.03)!important;
     color: rgba(0,0,0,.8)!important;
 }
+
+.rating {
+  float: left;
+  color: #74222a;
+  font-size: 32px;
+  line-height: 24px;
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  margin-top: -21px !important;
+}
+.rating .change {
+  cursor: pointer;
+}
+.rating .change > span {
+  display: inline-block;
+  position: relative;
+}
+.rating .change > span:hover:before,
+.rating .change > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
+
+h3 {
+  float: left !important;
+  margin-right: 30px !important;
+}
+
