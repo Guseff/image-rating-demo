@@ -9,7 +9,7 @@ export default class Image extends Component {
 
   spanClick(e) {
     // this.props.doReposesSearch(e.target.value);
-    this.props.getRating(e.target.value);
+    this.props.getRating(e.target.dataset.rate);
   }
 
   render() {
@@ -17,15 +17,9 @@ export default class Image extends Component {
 
     return (<div className="ui">
       <h3 className="ui header">Please, rate this picture:</h3>
-      <div className="rating">
-        <div className="change">
-          <span value="1" onClick={this.spanClick} >&#9734;</span>
-          <span value="2" onClick={this.spanClick} >&#9734;</span>
-          <span value="3" onClick={this.spanClick} >&#9734;</span>
-          <span value="4" onClick={this.spanClick} >&#9734;</span>
-          <span value="5" onClick={this.spanClick} >&#9734;</span>
-        </div>
-      </div>
+      <form className="ui form">
+        <div className="ui heart rating" data-rating="3" data-max-rating="5"></div>
+      </form>
     </div>);
   }
 }

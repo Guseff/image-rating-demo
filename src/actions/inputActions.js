@@ -10,7 +10,6 @@ export function getImage() {
     fetch(param)
       //  .then((resp) => resp.json())
       .then((resp) => {
-        console.log(resp);
         dispatch({
           type: GET_IMG,
           payload: resp,
@@ -18,8 +17,9 @@ export function getImage() {
       });
 }
 
-export function getRating(num) {
-  console.log(num);
+export function getRating(str) {
+  console.log(str);
+  const num = parseInt(str, 10);
   return (dispatch) =>
     dispatch({
       type: GET_RATING,
