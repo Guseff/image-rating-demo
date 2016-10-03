@@ -42,4 +42,6 @@ h3 {
   float: left !important;
   margin-right: 30px !important;
 }
-
+.rating {
+  margin-top: -3px;
+}
