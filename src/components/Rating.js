@@ -3,7 +3,7 @@ import React, { Component, PropTypes } from 'react';
 
 import Star from './Star';
 
-export default class Image extends Component {
+export default class Rating extends Component {
   constructor(props) {
     super(props);
 
