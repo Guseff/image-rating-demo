@@ -17,9 +17,7 @@ export function getImage() {
       });
 }
 
-export function getRating(str) {
-  console.log(str);
-  const num = parseInt(str, 10);
+export function getRating(num) {
   return (dispatch) =>
     dispatch({
       type: GET_RATING,

@@ -8,17 +8,20 @@ export default class Star extends Component {
   }
 
   spanClick(e) {
-    this.props.getRating(e.target.dataset.rate);
+    this.props.onClick(e.target.id);
   }
 
   render() {
-    const { rating } = this.props;
+    const { rating, starNo } = this.props;
 
-    return <i className="icon" />;
+    const cl = rating >= starNo ? 'icon active' : 'icon';
+
+    return <i onClick={this.spanClick} className={cl} id={starNo} />;
   }
 }
 
 Image.propTypes = {
   getRating: PropTypes.func.isRequired,
   rating: PropTypes.number,
+  starNo: PropTypes.number,
 };

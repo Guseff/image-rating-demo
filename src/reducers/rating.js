@@ -3,7 +3,7 @@ import {
 } from '../constants/constants.js';
 
 const initialState = {
-  rating: 0,
+  rating: 3,
 };
 
 export default function rating(state = initialState, action) {
