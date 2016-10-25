@@ -14,7 +14,7 @@ export default function rating(state = initialState, action) {
     case GET_RATING:
       return { ...state, rating: action.payload };
 
-  case GET_OVER:
+    case GET_OVER:
       return { ...state, over: action.payload };
 
     default:

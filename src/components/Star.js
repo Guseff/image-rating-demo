@@ -21,19 +21,21 @@ export default class Star extends Component {
 
   render() {
     const { rating, over, starNo } = this.props;
-
     let cl = rating > starNo ? 'icon active' : 'icon';
-  
     cl = over > starNo ? cl.concat(' selected') : cl;
-      console.log(over);
-// active
-    return <i onClick={this.spanClick} onMouseOver={this.spanBlur} onMouseLeave={this.spanLeave} className={cl} id={starNo} />;
+
+    return <i
+      onClick={this.spanClick} onMouseOver={this.spanBlur} onMouseLeave={this.spanLeave}
+      className={cl} id={starNo}
+    />;
   }
 }
 
 Image.propTypes = {
   getRating: PropTypes.func.isRequired,
   getOver: PropTypes.func.isRequired,
+  onMouseOver: PropTypes.func.isRequired,
+  onMouseLeave: PropTypes.func.isRequired,
   rating: PropTypes.number,
   over: PropTypes.number,
   starNo: PropTypes.number,

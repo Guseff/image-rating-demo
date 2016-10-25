@@ -18,9 +18,8 @@ export default class Rating extends Component {
     this.props.getOver(starNo);
   }
 
-
   render() {
-    const { rating, over, getRating, getOver } = this.props;
+    const { rating, over } = this.props;
     const arr = [1, 2, 3, 4, 5, 6, 7];
 
     return (<div className="ui">
@@ -29,7 +28,10 @@ export default class Rating extends Component {
         <div className="ui huge heart rating">
           {arr.map(
             (elem, index) =>
-              <Star key={index} starNo={index} rating={rating} over={over} onClick={this.spanClick} onMouseOver={this.spanBlur} />
+              <Star
+                key={index} starNo={index} rating={rating} over={over}
+                onClick={this.spanClick} onMouseOver={this.spanBlur}
+              />
           )}
         </div>
       </form>
