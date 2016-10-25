@@ -1,6 +1,7 @@
 import {
   GET_IMG,
   GET_RATING,
+  GET_OVER,
 } from '../constants/constants.js';
 
 
@@ -21,6 +22,14 @@ export function getRating(num) {
   return (dispatch) =>
     dispatch({
       type: GET_RATING,
+      payload: num,
+    });
+}
+
+export function getOver(num) {
+  return (dispatch) =>
+    dispatch({
+      type: GET_OVER,
       payload: num,
     });
 }
