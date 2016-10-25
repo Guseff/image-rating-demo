@@ -25,7 +25,7 @@ export default class Rating extends Component {
     return (<div className="ui">
       <h3 className="ui header">Please, rate this picture:</h3>
       <form className="ui form">
-        <div className="ui huge heart rating">
+        <div className="ui huge star rating">
           {arr.map(
             (elem, index) =>
               <Star

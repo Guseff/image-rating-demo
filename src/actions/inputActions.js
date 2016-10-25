@@ -2,6 +2,7 @@ import {
   GET_IMG,
   GET_RATING,
   GET_OVER,
+  NEW_PIC,
 } from '../constants/constants.js';
 
 
@@ -33,4 +34,12 @@ export function getOver(num) {
       payload: num,
     });
 }
+
+export function newPic() {
+  return (dispatch) =>
+    dispatch({
+      type: NEW_PIC,
+    });
+}
+
 

@@ -1,6 +1,7 @@
 import {
   GET_RATING,
   GET_OVER,
+  NEW_PIC,
 } from '../constants/constants.js';
 
 const initialState = {
@@ -16,6 +17,9 @@ export default function rating(state = initialState, action) {
 
     case GET_OVER:
       return { ...state, over: action.payload };
+
+    case NEW_PIC:
+      return { ...state, over: 0, rating: 3 };
 
     default:
       return state;
