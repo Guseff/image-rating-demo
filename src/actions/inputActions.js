@@ -3,6 +3,7 @@ import {
   GET_RATING,
   GET_OVER,
   NEW_PIC,
+  TEXT_CHANGE,
 } from '../constants/constants.js';
 
 
@@ -42,4 +43,11 @@ export function newPic() {
     });
 }
 
-
+export function changeT(value) {
+  return (dispatch) => {
+    dispatch({
+      type: TEXT_CHANGE,
+      payload: value,
+    });
+  };
+}

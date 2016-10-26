@@ -20,7 +20,7 @@ export default class Rating extends Component {
 
   render() {
     const { rating, over } = this.props;
-    const arr = [1, 2, 3, 4, 5, 6, 7];
+    const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
     return (<div className="ui">
       <h3 className="ui header">Please, rate this picture:</h3>

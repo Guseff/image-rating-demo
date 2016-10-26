@@ -5,7 +5,7 @@ export default class Image extends Component {
   render() {
     const { image } = this.props;
 
-    return (<div className="ui">
+    return (<div className="ui segment">
       <div className="">
         <img alt="" src={image.url} />
       </div>

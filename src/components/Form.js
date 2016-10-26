@@ -5,27 +5,31 @@ export default class Form extends Component {
     super(props);
 
     this.newPicReq = this.newPicReq.bind(this);
+    this.changeText = this.changeText.bind(this);
   }
 
   newPicReq() {
     this.props.newPic();
     this.props.getImage();
   }
+  changeText(e) {
+    this.props.changeT(e.target.value);
+  }
 
   render() {
-    const { newPic, getImage } = this.props;
+    const { text } = this.props;
 
     return (<div className="ui form">
       <div className="field">
-        <label>Text</label>
-        <textarea></textarea>
+        <textarea value={text} onChange={this.changeText} placeholder="Enter your comment here..." />
       </div>
-      <div className="ui submit button" onClick={this.newPicReq} >Submit</div>
+      <div className="ui submit button" onClick={this.newPicReq} >Send</div>
     </div>);
   }
 }
 
 Image.propTypes = {
-  newPic: PropTypes.func,
-  getImage: PropTypes.func,
+  text: PropTypes.string,
+  newPicReq: PropTypes.func,
+  changeText: PropTypes.func,
 };

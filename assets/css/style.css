@@ -3,7 +3,9 @@ body, div {
 }
 
 img {
-  width: 600px;
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .item, .ui.list {
