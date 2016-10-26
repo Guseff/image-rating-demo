@@ -28,8 +28,9 @@ export default class Form extends Component {
   }
 }
 
-Image.propTypes = {
+Form.propTypes = {
+  newPic: PropTypes.func.isRequired,
+  getImage: PropTypes.func.isRequired,
+  changeT: PropTypes.func.isRequired,
   text: PropTypes.string,
-  newPicReq: PropTypes.func,
-  changeText: PropTypes.func,
 };

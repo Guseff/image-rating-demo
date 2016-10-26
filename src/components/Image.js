@@ -1,18 +1,13 @@
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
 
-export default class Image extends Component {
-
-  render() {
-    const { image } = this.props;
-
-    return (<div className="ui segment">
-      <div className="">
-        <img alt="" src={image.url} />
-      </div>
-    </div>);
-  }
+export default function Image(image) {
+  return (<div className="ui segment">
+    <div className="">
+      <img alt="" src={image.url} />
+    </div>
+  </div>);
 }
 
-Image.propTypes = {
-  image: PropTypes.object,
-};
+// Image.propTypes = {
+//   image: PropTypes.object,
+// };

@@ -18,7 +18,7 @@ class App extends Component {
         <div className="ui segment">
           <h2 className="ui header">Title of Test 3</h2>
         </div>
-        <Image image={image} />
+        {Image(image)}
         <div className="ui segment">
           <Rating rating={rating} over={over} getRating={getRating} getOver={getOver} />
           <Form newPic={newPic} getImage={getImage} changeT={changeT} text={text} />

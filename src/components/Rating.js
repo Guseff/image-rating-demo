@@ -39,7 +39,7 @@ export default class Rating extends Component {
   }
 }
 
-Image.propTypes = {
+Rating.propTypes = {
   getRating: PropTypes.func.isRequired,
   getOver: PropTypes.func.isRequired,
   rating: PropTypes.number,

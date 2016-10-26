@@ -31,12 +31,9 @@ export default class Star extends Component {
   }
 }
 
-Image.propTypes = {
-  getRating: PropTypes.func.isRequired,
-  getOver: PropTypes.func.isRequired,
+Star.propTypes = {
   onClick: PropTypes.func,
   onMouseOver: PropTypes.func.isRequired,
-  onMouseLeave: PropTypes.func.isRequired,
   rating: PropTypes.number,
   over: PropTypes.number,
   starNo: PropTypes.number,
