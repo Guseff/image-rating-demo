@@ -40,6 +40,7 @@ class Star extends Component {
 function mapStateToProps(state) {
   return {
     rating: state.rating.rating,
+    over: state.rating.over,
   };
 }
 
