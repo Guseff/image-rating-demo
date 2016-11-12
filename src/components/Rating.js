@@ -7,19 +7,19 @@ export default class Rating extends Component {
   constructor(props) {
     super(props);
 
-    this.spanClick = this.spanClick.bind(this);
+    // this.spanClick = this.spanClick.bind(this);
     this.spanBlur = this.spanBlur.bind(this);
   }
 
-  spanClick(starNo) {
-    this.props.getRating(starNo);
-  }
+  // spanClick(starNo) {
+  //   this.props.getRating(starNo);
+  // }
   spanBlur(starNo) {
     this.props.getOver(starNo);
   }
 
   render() {
-    const { rating, over } = this.props;
+    const { over } = this.props;
     const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
     return (<div className="ui">
@@ -29,8 +29,11 @@ export default class Rating extends Component {
           {arr.map(
             (elem, index) =>
               <Star
-                key={index} starNo={index} rating={rating} over={over}
-                onClick={this.spanClick} onMouseOver={this.spanBlur}
+                key={index}
+                starNo={index}
+                // rating={rating}
+                over={over}
+                onMouseOver={this.spanBlur}
               />
           )}
         </div>
@@ -40,8 +43,7 @@ export default class Rating extends Component {
 }
 
 Rating.propTypes = {
-  getRating: PropTypes.func.isRequired,
+  // getRating: PropTypes.func.isRequired,
   getOver: PropTypes.func.isRequired,
-  rating: PropTypes.number,
   over: PropTypes.number,
 };

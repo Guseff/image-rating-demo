@@ -1,6 +1,10 @@
 import React, { Component, PropTypes } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
-export default class Star extends Component {
+import * as inputActions from '../actions/inputActions';
+
+class Star extends Component {
   constructor(props) {
     super(props);
 
@@ -10,11 +14,13 @@ export default class Star extends Component {
   }
 
   spanClick(e) {
-    this.props.onClick(parseInt(e.target.id, 10) + 1);
+    this.props.getRating(parseInt(e.target.id, 10) + 1);
   }
+
   spanBlur(e) {
     this.props.onMouseOver(parseInt(e.target.id, 10) + 1);
   }
+
   spanLeave() {
     this.props.onMouseOver(0);
   }
@@ -31,9 +37,24 @@ export default class Star extends Component {
   }
 }
 
+function mapStateToProps(state) {
+  return {
+    rating: state.rating.rating,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    getRating: bindActionCreators(inputActions.getRating, dispatch),
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Star);
+
+
 Star.propTypes = {
-  onClick: PropTypes.func,
   onMouseOver: PropTypes.func.isRequired,
+  getRating: PropTypes.func.isRequired,
   rating: PropTypes.number,
   over: PropTypes.number,
   starNo: PropTypes.number,
