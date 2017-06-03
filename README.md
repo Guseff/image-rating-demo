@@ -1,2 +1,3 @@
-# redux-test-2
-Тестовы проект
+# Image rating
+
+App for rating random images from internet.
